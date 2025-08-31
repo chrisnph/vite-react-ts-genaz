@@ -5,6 +5,7 @@ import { FullScreenBannerProvider } from "../components/FullScreenBanner/context
 import { AnimatePresence } from "framer-motion";
 import SignUp from "../pages/SignUp";
 import SignUpSuccess from "../pages/SignUp/SignUpSuccess";
+import NotFound from "../pages/NotFound";
 
 const Routing = () => {
   const location = useLocation();
@@ -18,6 +19,8 @@ const Routing = () => {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/sign-up/success" element={<SignUpSuccess />} />
           </Route>
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </FullScreenBannerProvider>
