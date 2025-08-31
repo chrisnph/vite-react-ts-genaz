@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import carshow from "./assets/carshow.mp4";
 import { motion } from "framer-motion";
 import { useFullScreenBanner } from "./context/fullScreenBannerContext";
 import { Link } from "react-router-dom";
 import LoadingScreen from "../LoadingScreen";
+import carshow from "./assets/carshow.mp4";
+import carshowMobile from "./assets/carshow-m.mp4";
 
 const FullScreenBanner = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const [videoSrc, setVideoSrc] = useState(carshow); // default
   const [isVideoReady, setIsVideoReady] = useState(false);
 
   const {
@@ -16,6 +18,23 @@ const FullScreenBanner = () => {
     toggleBannerVideoEnd,
     handleSkipBannerVideo,
   } = useFullScreenBanner();
+
+  useEffect(() => {
+    const updateVideoSource = () => {
+      if (window.innerWidth > 767) {
+        setVideoSrc(carshow);
+      } else {
+        setVideoSrc(carshowMobile);
+      }
+    };
+
+    updateVideoSource();
+    window.addEventListener("resize", updateVideoSource);
+
+    return () => {
+      window.removeEventListener("resize", updateVideoSource);
+    };
+  }, []);
 
   useEffect(() => {
     setIsVideoEnded(false);
@@ -38,6 +57,7 @@ const FullScreenBanner = () => {
       className="relative flex items-center justify-center h-screen overflow-hidden"
     >
       <video
+        key={videoSrc}
         ref={videoRef}
         autoPlay
         muted
@@ -45,7 +65,7 @@ const FullScreenBanner = () => {
         onEnded={() => toggleBannerVideoEnd()}
         onCanPlayThrough={() => setIsVideoReady(true)}
       >
-        <source src={carshow} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
       </video>
 
       {!isVideoReady ? (
