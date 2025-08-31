@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+## Vite - React Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="background: rgb(0, 0, 0, 0.3); color: #ffffff; padding: 1px 30px 20px 30px">
+  <h3>Features</h3>
+  <ul>
+    <li>Animations with Framer Motion</li>
+    <li>TailwindCSS V4</li>
+    <li>ContextAPI</li>
+    <li>Formik + Yup Validation</li>
+    <li>Axios Request Handling</li>
+  </ul>
+</div>
 
-Currently, two official plugins are available:
+<br /><hr /><br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div style="background: rgb(0, 0, 0, 0.3); color: #ffffff; padding: 1px 30px 20px 30px">
+  <h3>Modular Project Structure</h3>
+  <ul>
+    <li>Less coupling on component and page </li>
+    <li>Ease of re-use, entire folder can be copied and only needs to be imported for use</li>
+    <li>No additional boilerplate setup</li>
+  </ul>
+</div>
 
-## Expanding the ESLint configuration
+<br /><hr /><br />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<div style="background: rgb(0, 0, 0, 0.3); color: #ffffff; padding: 1px 30px 20px 30px">
+<br />
+  <h3>Installation</h3>
+  <ol>
+    <li style="margin-bottom: 10px">Clone repo</li>
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    git clone https://github.com/chrisnph/vite-react-ts-genaz.git
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+  <li style="margin-bottom: 10px">change into project directory</li>
+    
+    cd vite-react-ts-genaz
+  
+  <li style="margin-bottom: 10px">Install dependencies</li>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    npm i
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  <ol>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+</div>
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<br /><hr /><br />
+
+<div style="background: rgb(0, 0, 0, 0.3); color: #ffffff; padding: 1px 30px 20px 30px">
+<br />
+
+  <h3>Run Commands:</h3>
+
+- Start on Local Environment:
+
+      npm run start:local
+
+- Start on Staging Environment:
+
+      npm run start:stage
+
+- Start on Production Environment:
+
+      npm run start:prod
+
+  <hr />
+
+<h3>Build Commands:</h3>
+  <br />
+
+- Build on Local Environment:
+
+      npm run build:local
+
+- Build on Staging Environment:
+
+      npm run build:stage
+
+- Build on Production Environment:
+
+      npm run build:prod
+
+<hr />
+
+<span style="font-size: 10px">
+  - env files are located in ./environments
+  </span>
+
+</div>
