@@ -58,7 +58,7 @@ const About = () => {
   }, [setIsVideoEnded]);
 
   return (
-    <div className="min-h-screen py-10 md:pb-[200px]">
+    <div className="min-h-screen pt-10 pb-20 md:pb-[200px]">
       <div className="relative md:grid md:grid-cols-2 gap-10 snap-start items-center pb-[50px] md:pb-0">
         <motion.div
           variants={variantLeft}
