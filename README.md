@@ -1,6 +1,6 @@
 ## Vite - React Typescript
 
-<a href="https://vite-react-ts-genaz.vercel.app/" style="font-size: 36px;">Demo</a>
+<a href="https://vite-react-ts-genaz.vercel.app/" style="font-size: 36px;" target="_blank">Demo</a>
 
 <hr /><br />
 
