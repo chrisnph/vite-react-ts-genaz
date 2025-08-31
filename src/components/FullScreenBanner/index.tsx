@@ -120,7 +120,7 @@ const FullScreenBanner = () => {
               >
                 <Link
                   to="/about"
-                  className="w-[160px] text-[rgba(255,255,255,0.6)] px-3 py-2 bg-gradient-to-b from-[#681a2b] to-[#250403] rounded-lg"
+                  className="block w-[180px] text-[rgba(255,255,255,0.6)] px-3 py-2 bg-gradient-to-b from-[#681a2b] to-[#250403] rounded-lg"
                 >
                   Learn More
                 </Link>
@@ -144,7 +144,7 @@ const FullScreenBanner = () => {
               >
                 <Link
                   to="/sign-up"
-                  className="w-[160px] text-[rgba(255,255,255,0.6)] px-3 py-2 bg-gradient-to-b from-[#250403] to-[#681a2b] rounded-lg"
+                  className="block w-[180px] text-[rgba(255,255,255,0.6)] px-3 py-2 bg-gradient-to-b from-[#250403] to-[#681a2b] rounded-lg"
                 >
                   Campaign Sign Up
                 </Link>
