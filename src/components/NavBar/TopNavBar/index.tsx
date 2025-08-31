@@ -18,6 +18,13 @@ const TopNavBar = ({ positionAbsolute }: TopNavBarType) => {
     <>
       <Link
         className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#ca1711] after:to-[#681a2b] after:transition-all after:duration-700 hover:after:w-full"
+        to="/about"
+        onClick={() => setMenuOpen(false)}
+      >
+        About
+      </Link>
+      <Link
+        className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-10px] after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#ca1711] after:to-[#681a2b] after:transition-all after:duration-700 hover:after:w-full"
         to="/sign-up"
         onClick={() => setMenuOpen(false)}
       >

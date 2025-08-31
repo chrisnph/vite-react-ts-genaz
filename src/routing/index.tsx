@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import SignUp from "../pages/SignUp";
 import SignUpSuccess from "../pages/SignUp/SignUpSuccess";
 import NotFound from "../pages/NotFound";
+import About from "../pages/About";
 
 const Routing = () => {
   const location = useLocation();
@@ -15,9 +16,14 @@ const Routing = () => {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
+
           <Route element={<MainLayout hasNavBar paddedTop paddedX />}>
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/sign-up/success" element={<SignUpSuccess />} />
+          </Route>
+
+          <Route element={<MainLayout hasNavBar paddedTop paddedX />}>
+            <Route path="/about" element={<About />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />

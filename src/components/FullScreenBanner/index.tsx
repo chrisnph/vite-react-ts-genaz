@@ -76,7 +76,7 @@ const FullScreenBanner = () => {
           <>
             <motion.div
               initial={{
-                y: -100,
+                y: 100,
                 opacity: 0,
               }}
               animate={{
@@ -86,6 +86,30 @@ const FullScreenBanner = () => {
               transition={{
                 duration: 1.5,
                 delay: 1,
+                ease: "easeOut",
+              }}
+              className="absolute top-[30%]"
+            >
+              <Link
+                to="/about"
+                className="w-[160px] text-[rgba(255,255,255,0.6)] px-3 py-2 bg-gradient-to-b from-[#681a2b] to-[#250403] rounded-lg"
+              >
+                Learn More
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{
+                y: -100,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.5,
+                delay: 1.5,
                 ease: "easeOut",
               }}
               className="absolute top-[70%]"
