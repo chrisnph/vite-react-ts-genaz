@@ -58,8 +58,8 @@ const About = () => {
   }, [setIsVideoEnded]);
 
   return (
-    <div className="min-h-screen pb-[200px]">
-      <div className="relative grid grid-cols-2 gap-10 snap-start items-center">
+    <div className="min-h-screen py-10 md:pb-[200px]">
+      <div className="relative md:grid md:grid-cols-2 gap-10 snap-start items-center pb-[50px] md:pb-0">
         <motion.div
           variants={variantLeft}
           initial="hidden"
@@ -79,7 +79,7 @@ const About = () => {
           whileInView="visible"
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-gray-500"
+          className="text-gray-500 md:mt-0 mt-5"
         >
           Tesla Model 3 and Model Y were displayed at IOI City Mall Putrajaya on
           February 2024. A significant crowd was attracted to the event, with
@@ -89,14 +89,14 @@ const About = () => {
         </motion.div>
       </div>
 
-      <div className="relative grid grid-cols-2 gap-10 snap-start items-center mt-[200px]">
+      <div className="relative flex flex-col-reverse md:grid md:grid-cols-2 gap-10 snap-start items-center mt-5 md:mt-[200px] pb-[50px] md:pb-0">
         <motion.div
           variants={variantTextLeft}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 1.5, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-gray-500"
+          className="text-gray-500 md:mt-0"
         >
           With careful planning, our team ensured that every aspect of the event
           was meticulously managed from graphic designs to event execution, we
@@ -118,7 +118,7 @@ const About = () => {
         </motion.div>
       </div>
 
-      <div className="relative grid grid-cols-2 gap-10 snap-start items-center mt-[200px]">
+      <div className="relative md:grid md:grid-cols-2 gap-10 snap-start items-center mt-5 md:mt-[200px]">
         <motion.div
           variants={variantLeft}
           initial="hidden"
@@ -138,7 +138,7 @@ const About = () => {
           viewport={{ once: true }}
           whileInView="visible"
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-gray-500"
+          className="text-gray-500 md:mt-0 mt-5"
         >
           The roadshow attracted a diverse crowd, giving visitors the
           opportunity to explore Tesla’s cutting-edge technology up close. Stay
