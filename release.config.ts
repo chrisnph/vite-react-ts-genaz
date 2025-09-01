@@ -21,12 +21,12 @@ const config: Options = {
             { type: "feat", section: "Features" },
             { type: "fix", section: "Bug Fixes" },
             { type: "docs", section: "Documentation" },
-            { type: "style", section: "Styles", hidden: false }, // <-- include style commits in changelog
-            { type: "refactor", section: "Refactoring" },
+            { type: "style", section: "UI Changes", hidden: false }, // <-- include style commits in changelog
+            { type: "refactor", section: "Refactored" },
             { type: "perf", section: "Performance Improvements" },
             { type: "test", section: "Tests" },
             { type: "build", section: "Build System" },
-            { type: "ci", section: "Continuous Integration" },
+            { type: "ci", section: "CI/CD" },
             { type: "chore", section: "Miscellaneous Chores" },
             { type: "revert", section: "Reverts" },
           ],
