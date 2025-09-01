@@ -8,7 +8,7 @@ const config: Options = {
       {
         preset: "conventionalcommits",
         releaseRules: [
-          { breaking: true, release: "major" }, // handle BREAKING CHANGE commits properly
+          { type: "break", release: "major" }, // <-- treat break prefix as breaking
           { type: "style", release: "patch" }, // Treat 'style' as a patch release
         ],
       },
@@ -19,6 +19,7 @@ const config: Options = {
         preset: "conventionalcommits",
         presetConfig: {
           types: [
+            { type: "break", section: "⚠️ Breaking Changes", hidden: false }, // <-- show break commits
             { type: "feat", section: "Features" },
             { type: "fix", section: "Bug Fixes" },
             { type: "docs", section: "Documentation" },
