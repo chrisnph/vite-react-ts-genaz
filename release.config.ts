@@ -1,25 +1,33 @@
 import type { Options } from "semantic-release";
 
 const config: Options = {
-  branches: ["main"], // Specify release branch
+  branches: ["main"],
   plugins: [
-    "@semantic-release/commit-analyzer", // Analyzes commits for version bumps
-    "@semantic-release/release-notes-generator", // Generates release notes
     [
-      "@semantic-release/npm", // Updates npm package (optional, for libraries)
+      "@semantic-release/commit-analyzer",
       {
-        npmPublish: false, // Set to true if publishing to npm
+        preset: "conventionalcommits",
+        releaseRules: [
+          { type: "style", release: "patch" }, // Treat 'style' as a patch release
+        ],
+      },
+    ],
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        npmPublish: false, // Adjust if publishing to npm
       },
     ],
     [
-      "@semantic-release/git", // Commits changes to Git
+      "@semantic-release/git",
       {
-        assets: ["package.json", "dist/**/*"], // Include Vite build output
+        assets: ["package.json", "dist/**/*"],
         message:
           "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
-    "@semantic-release/github", // Publishes GitHub releases
+    "@semantic-release/github",
   ],
 };
 
