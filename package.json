@@ -1,7 +1,7 @@
 {
   "name": "genaz",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start:local": "vite --mode dev",
@@ -14,7 +14,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "release": "dotenv -- semantic-release"
+    "release": "node release.js"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
