@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 import { useFullScreenBanner } from "./context/fullScreenBannerContext";
 import { Link } from "react-router-dom";
 import LoadingScreen from "../LoadingScreen";
-import carshow from "./assets/carshow.mp4";
-import carshowMobile from "./assets/carshow-m.mp4";
 
 const FullScreenBanner = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const [videoSrc, setVideoSrc] = useState(carshow); // default
+  const [videoSrc, setVideoSrc] = useState('https://github.com/chrisnph/placeholder-files/raw/refs/heads/main/videos/carshow.mp4'); // default
   const [isVideoReady, setIsVideoReady] = useState(false);
 
   const {
@@ -22,9 +20,11 @@ const FullScreenBanner = () => {
   useEffect(() => {
     const updateVideoSource = () => {
       if (window.innerWidth > 767) {
-        setVideoSrc(carshow);
+        setVideoSrc('https://github.com/chrisnph/placeholder-files/raw/refs/heads/main/videos/carshow.mp4');
       } else {
-        setVideoSrc(carshowMobile);
+        setVideoSrc(
+          "https://github.com/chrisnph/placeholder-files/raw/refs/heads/main/videos/carshow-m.mp4"
+        );
       }
     };
 
