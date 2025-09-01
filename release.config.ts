@@ -12,7 +12,27 @@ const config: Options = {
         ],
       },
     ],
-    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        preset: "conventionalcommits",
+        presetConfig: {
+          types: [
+            { type: "feat", section: "Features" },
+            { type: "fix", section: "Bug Fixes" },
+            { type: "docs", section: "Documentation" },
+            { type: "style", section: "Styles", hidden: false }, // <-- include style commits in changelog
+            { type: "refactor", section: "Refactoring" },
+            { type: "perf", section: "Performance Improvements" },
+            { type: "test", section: "Tests" },
+            { type: "build", section: "Build System" },
+            { type: "ci", section: "Continuous Integration" },
+            { type: "chore", section: "Miscellaneous Chores" },
+            { type: "revert", section: "Reverts" },
+          ],
+        },
+      },
+    ],
     [
       "@semantic-release/npm",
       {
