@@ -8,6 +8,7 @@ const config: Options = {
       {
         preset: "conventionalcommits",
         releaseRules: [
+          { breaking: true, release: "major" }, // handle BREAKING CHANGE commits properly
           { type: "style", release: "patch" }, // Treat 'style' as a patch release
         ],
       },
